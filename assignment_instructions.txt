@@ -1,0 +1,36 @@
+Thank you so much for taking your time to look at my assignment!
+
+- Please install all dependencies by entering 'npm install' on terminal
+- Please open up another terminal and entering 'npx json-server --watch data/db.json --port 8000'
+- Lastly, please go back to the first terminal and run the project by entering 'npm run start'
+
+-------------------------------------------------------------------------
+
+- In accordance with Figma, I broke up the page into 5 big parts: SideNav, NavBar, Header, Content, and Activity Feed.
+- Within those big parts, I tried to spot smaller reusable parts and make appropriate components that will allow me to
+easily create multiple of them.
+- Some examples are the square tabs on the SideBar (all share same width and height, background color, etc. as well as the centered icon layout)
+and company/team rectangular cards inside Content.
+- In SideBar's tabs, the only unique aspect between them is the icon image, so I passed in the image link as props.
+- In Content's cards, pretty much every element inside them are based on unique teams, so there was a little more work to do.
+
+- Some JavaScript array methods I used are map() and filter().
+- I used map method to create a new array from the received array provided in mock data like activities in ActivityFeed.
+- When I saw the Content part in which user can select to view all/favorite/archived teams, filter method immediately came into my mind
+as the easiest way to implement the update on the teams array to pick out appropriate teams to display.
+
+- I used Axios instead of fetch to communicate with mock backend to simplify code a bit.
+
+- I used a fake REST API called JSON Server to handle back-end side (I wrote all the requests to go to port number 8000 on the front-end side).
+- I copy-pasted the provided data.json mock data file and saved it as 'db.json' in data folder. 
+
+- In terms of CSS, I put most of it in App.css file and put short in-line styling in some components.
+- I ended up using flexbox a lot in all of those parts, especially with 'justify-content: space-between' and 'align-items: center'.
+- One of the examples in Header has NARWHAL logo and 'Teams' on the left side and inbox and user menu on the right side.
+- The cards in Content were taken care of by using grid display on their container (1fr 1fr 1fr columns and grid gap).
+
+- Redux was not used but looking back, it seems like a good idea to incorporate Redux to take care of things like storing teams data
+and view that user selected (all/favorite/archived).
+Doing so would have simplified the code more by reducing instances in which props get passed down and thrown around.
+- Also, the page is not responsive yet. I am planning to review making responsive websites and then make this project adjust well to different screen sizes.
+- Lastly, I will look more into good folder organization practices for react projects and CSS organization practices
